@@ -1,0 +1,104 @@
+/*
+テキスト・フォントのmixinSass
+構成
+- 変数のインポート
+- ヘッダー
+    - ヘッダータイトル
+    - ヘッダーナビゲーション
+- 本文
+    - スマホ
+        - 見出し大
+        - 見出し中
+        - 見出し小
+        - パラグラフ
+    - タブレット
+        - 見出し大
+        - 見出し中
+        - 見出し小
+        - パラグラフ
+    - PC
+        - 見出し大
+        - 見出し中
+        - 見出し小
+        - パラグラフ
+*/
+
+
+/*変数のインポート*/
+@import "variable.scss";
+
+/*ヘッダー*/
+/*ヘッダータイトル(サイトタイトル)*/
+@mixin header_title($rem) {
+    //余白
+    letter-spacing: 0.1em;
+    line-height: 1.3em;
+    //テキスト
+    font-size: $rem;
+    font-family: $font1;
+    color: colors(text1);
+
+    a {
+        color: colors(text2);
+    }
+}
+@mixin header_nav($rem) {
+    //余白
+    letter-spacing: 0.1em;
+    line-height: 1.3em;
+    font-size: $rem;
+    font-family: $font1;
+    color: colors(text1);
+}
+
+/************本文***********/
+//見出し大（ページタイトル）
+@mixin headline_h2($rem){
+    //余白
+    //ボーダー
+    //フォント
+    font-size: $rem;
+    font-family: $font1;
+    color: colors(text1);
+}
+//見出し中
+@mixin headline_h3(){
+    //余白
+    //ボーダー
+    //フォント
+    font-size: 2rem;
+    font-family: $font1;
+    color: colors(text1);
+}
+//見出し小
+@mixin headline_h4(){
+    //余白
+    //ボーダー
+    //フォント
+    font-size: 1.5rem;
+    font-family: $font1;
+    color: colors(text1);
+}
+//本文
+@mixin paragraph(){
+    //余白
+    //ボーダー
+    //フォント
+    font-size: 1rem;
+    font-family: $font1;
+    color: colors(text1);
+}
+/*アクセント・ハイライト*/
+@mixin highlight {
+    font-family: $font1;
+    font-size: 1rem;
+    font: bold;
+    color: colors(accent);
+}
+
+/*リンク*/
+@mixin nav_link {
+    color: colors(text2);
+    background-color: colors(accent);
+}
+

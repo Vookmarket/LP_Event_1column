@@ -1,0 +1,166 @@
+/*インポート*/
+@import "variable.scss"; //変数Sass
+@import "text.scss"; //テキスト・フォントのSass
+@import "component.scss"; //コンポネントのSass
+@import "layout.scss"; //レイアウトのSass
+
+/*
+構成
+- 共通スタイル
+- メディアクエリ（スマhファースト）
+    - スマホ
+    - タブレット
+    - PC
+*/
+
+//共通スタイル
+html {
+    font-size: 16px;
+    @include paragraph();
+}
+
+body {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    background-color: colors(devide);
+
+    .header {
+        .header_title {
+            @include header_title(3rem);
+        }
+
+        @include hamburger(5px);
+
+        .header_nav {
+            @include header_nav(1rem);
+        }
+    }
+
+    .main {
+        .section {
+            .section_title {
+                @include headline_h3;
+            }
+
+            .section_content {}
+        }
+    }
+
+    .footer {
+        .copywrite {}
+    }
+}
+
+//スマホファーストの順序
+//スマホ
+@include mq(sp) {
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .container {
+        .header {
+
+            .header_title {}
+
+            .header_nav {}
+        }
+
+        .main {
+            .section {
+                .section_title {}
+
+                .section_content {}
+            }
+        }
+
+        .footer {
+            .copywrite {}
+        }
+    }
+
+}
+
+//タブレット
+@include mq(tab) {
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .container {
+        .header {
+            .header_title {}
+
+            .header_nav {}
+        }
+
+        .main {
+            .section {
+                .section_title {}
+
+                .section_content {}
+            }
+        }
+
+        .footer {
+            .copywrite {}
+        }
+    }
+
+}
+
+//PC
+@include mq(pc) {
+    html {}
+
+    body {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .container {
+        .header {
+            .header_title {}
+
+            .header_nav {}
+        }
+
+        .main {
+            .section {
+                .section_title {}
+
+                .section_content {}
+            }
+        }
+
+        .footer {
+            .copywrite {}
+        }
+    }
+
+}

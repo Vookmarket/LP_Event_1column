@@ -1,0 +1,227 @@
+@import "variable.scss";
+@import "text.scss";
+
+
+
+/*
+コンポネント
+構成
+- ボックス
+    - 直線ボックス
+    - 破線ボックス
+    - 角丸ボックス
+- リスト
+- テーブル
+- 画像
+- ハンバーガーメニュー
+
+*/
+/*ボックス*/
+@mixin box1() {
+    //直線ボックス
+    /*余白*/
+    margin: 0.3rem;
+    padding: 0.3rem 0.3rem 1rem 0.3rem;
+    /*ボーダー*/
+    border: solid 3px colors(devide);
+    /*背景*/
+    background-color: colors(main);
+    /*影*/
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+@mixin box2 {
+    //破線ボックス
+    /*余白*/
+    margin: auto;
+    padding: auto;
+    /*ボーダー*/
+    border: dashed 3px colors(devide);
+    /*背景*/
+    background-color: colors(main);
+    /*影*/
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+@mixin box3 {
+    //角丸ボックス
+    /*余白*/
+    margin: auto;
+    padding: auto;
+    /*ボーダー*/
+    border: solid 3px colors(devide);
+    border-radius: 10px;
+    /*背景*/
+    background-color: colors(main);
+    /*影*/
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+/***********リスト***********/
+@mixin list1 {
+    list-style: armenian;
+}
+
+@mixin list2 {}
+
+/***********テーブル***********/
+@mixin table1 {
+    width: 100%;
+
+    th {
+        position: relative;
+        text-align: left;
+        width: 15%;
+        text-align: center;
+
+        &:after {
+            display: block;
+            content: "";
+            width: 30px;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            top: calc(50% - 1px);
+            right: -15px;
+
+        }
+
+    }
+
+    td {
+        text-align: left;
+
+        width: 75;
+        padding: 7px 0 7px 30px;
+
+    }
+}
+
+@mixin table2 {
+    width: 100%;
+
+    th {
+        position: relative;
+        text-align: center;
+        width: 15%;
+
+        &:after {
+            display: block;
+            content: "";
+            width: 5px;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            top: calc(50% - 1px);
+            right: -15px;
+
+        }
+
+    }
+
+    td {
+        text-align: left;
+
+        width: 75;
+        padding: 7px 0 7px 30px;
+
+    }
+
+}
+
+/***********画像***********/
+@mixin image1 {}
+
+@mixin image2 {}
+
+
+
+/*
+ハンバーガーメニュー
+index.html内のheaderタグ内に
+<!--ハンバーガーメニュー-->
+<input type="checkbox" id="menu-btn-check">
+<label for="menu-btn-check" class="menu-btn"><span></span></label>
+を追加する.
+また、.header_nav_ulスタイル内に
+display: none;
+を追加する
+*/
+@mixin hamburger($position) {
+    .menu-btn {
+        position: fixed;
+        top: $position;
+        right: $position;
+        display: flex;
+        height: 2rem;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+        background-color: none;
+    }
+
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: colors(base1);
+        position: absolute;
+    }
+
+    .menu-btn span:before {
+        bottom: 8px;
+    }
+
+    .menu-btn span:after {
+        top: 8px;
+    }
+
+    //ハンバーガーアイコンのCSS
+    #menu-btn-check:checked~.menu-btn span {
+        background-color: rgba(255, 255, 255, 0);
+        /*メニューオープン時は真ん中の線を透明にする*/
+    }
+
+    #menu-btn-check:checked~.menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    #menu-btn-check:checked~.menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    #menu-btn-check {
+        display: none;
+    }
+
+    #menu-btn-check:checked~.header_nav_ul {
+        //ハンバーガーメニューにチェックがついたときにスタイル付与
+        display: block;
+    }
+
+    @include mq(sp){
+        .header_nav_ul{
+            display: none;
+        }
+    }
+    @include mq(tab){
+        .header_nav_ul{
+            display: none;
+        }
+    }
+    @include mq(pc){
+        .menu-btn{
+            display: none;
+        }
+        .header_nav_ul{
+            display: block;
+        }
+    }
+}

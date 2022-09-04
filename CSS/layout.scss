@@ -1,0 +1,38 @@
+/*
+レイアウト
+構成
+- ボックス分割
+    - 親要素
+    - 子要素
+    - グローバルナビゲーション
+*/
+
+/*ボックス分割*/
+//親要素
+@mixin devide_parent {
+    //親要素
+    content: "";
+    display: flex;
+    justify-content: center;
+}
+//子要素(幅を%で指定)
+@mixin devide_child($width) {
+    display: block;
+    width: $width;
+    justify-content: center;
+}
+//グローバルナビゲーション(幅を%で指定)
+@mixin devide_nav($width) {
+    display: block;
+    width: $width;
+    justify-content: center;
+    /*余白*/
+    margin: 0rem;
+    padding: 0rem;
+    /*ボーダー*/
+    border-right: dashed 3px colors(devide);
+
+    &:last-child {
+        border-right: none;
+    }
+}

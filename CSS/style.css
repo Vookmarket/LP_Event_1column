@@ -1,0 +1,314 @@
+@charset "UTF-8";
+/*インポート*/
+/*
+構成
+- 配色
+- フォント
+- アイコン
+- メディアクエリ
+*/
+/***********配色***********/
+/************フォント***********/
+/***********アイコン***********/
+/***********メディアクエリの変数***********/
+/*
+テキスト・フォントのmixinSass
+構成
+- 変数のインポート
+- ヘッダー
+    - ヘッダータイトル
+    - ヘッダーナビゲーション
+- 本文
+    - スマホ
+        - 見出し大
+        - 見出し中
+        - 見出し小
+        - パラグラフ
+    - タブレット
+        - 見出し大
+        - 見出し中
+        - 見出し小
+        - パラグラフ
+    - PC
+        - 見出し大
+        - 見出し中
+        - 見出し小
+        - パラグラフ
+*/
+/*変数のインポート*/
+/*
+構成
+- 配色
+- フォント
+- アイコン
+- メディアクエリ
+*/
+/***********配色***********/
+/************フォント***********/
+/***********アイコン***********/
+/***********メディアクエリの変数***********/
+/*ヘッダー*/
+/*ヘッダータイトル(サイトタイトル)*/
+/************本文***********/
+/*アクセント・ハイライト*/
+/*リンク*/
+/*
+構成
+- 配色
+- フォント
+- アイコン
+- メディアクエリ
+*/
+/***********配色***********/
+/************フォント***********/
+/***********アイコン***********/
+/***********メディアクエリの変数***********/
+/*
+テキスト・フォントのmixinSass
+構成
+- 変数のインポート
+- ヘッダー
+    - ヘッダータイトル
+    - ヘッダーナビゲーション
+- 本文
+    - スマホ
+        - 見出し大
+        - 見出し中
+        - 見出し小
+        - パラグラフ
+    - タブレット
+        - 見出し大
+        - 見出し中
+        - 見出し小
+        - パラグラフ
+    - PC
+        - 見出し大
+        - 見出し中
+        - 見出し小
+        - パラグラフ
+*/
+/*変数のインポート*/
+/*
+構成
+- 配色
+- フォント
+- アイコン
+- メディアクエリ
+*/
+/***********配色***********/
+/************フォント***********/
+/***********アイコン***********/
+/***********メディアクエリの変数***********/
+/*ヘッダー*/
+/*ヘッダータイトル(サイトタイトル)*/
+/************本文***********/
+/*アクセント・ハイライト*/
+/*リンク*/
+/*
+コンポネント
+構成
+- ボックス
+    - 直線ボックス
+    - 破線ボックス
+    - 角丸ボックス
+- リスト
+- テーブル
+- 画像
+- ハンバーガーメニュー
+
+*/
+/*ボックス*/
+/***********リスト***********/
+/***********テーブル***********/
+/***********画像***********/
+/*
+ハンバーガーメニュー
+index.html内のheaderタグ内に
+<!--ハンバーガーメニュー-->
+<input type="checkbox" id="menu-btn-check">
+<label for="menu-btn-check" class="menu-btn"><span></span></label>
+を追加する.
+また、.header_nav_ulスタイル内に
+display: none;
+を追加する
+*/
+/*
+レイアウト
+構成
+- ボックス分割
+    - 親要素
+    - 子要素
+    - グローバルナビゲーション
+*/
+/*ボックス分割*/
+/*
+構成
+- 共通スタイル
+- メディアクエリ（スマhファースト）
+    - スマホ
+    - タブレット
+    - PC
+*/
+html {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Mayryo", sans-serif;
+  color: black;
+}
+
+body {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  background-color: darkgray;
+}
+
+.container .header .header_title {
+  letter-spacing: 0.1em;
+  line-height: 1.3em;
+  font-size: 3rem;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Mayryo", sans-serif;
+  color: black;
+}
+
+.container .header .header_title a {
+  color: brown;
+}
+
+.container .header .menu-btn {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2rem;
+  width: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 90;
+  background-color: none;
+}
+
+.container .header .menu-btn span,
+.container .header .menu-btn span:before,
+.container .header .menu-btn span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: white;
+  position: absolute;
+}
+
+.container .header .menu-btn span:before {
+  bottom: 8px;
+}
+
+.container .header .menu-btn span:after {
+  top: 8px;
+}
+
+.container .header #menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(255, 255, 255, 0);
+  /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+.container .header #menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.container .header #menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.container .header #menu-btn-check {
+  display: none;
+}
+
+.container .header #menu-btn-check:checked ~ .header_nav_ul {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .container .header .header_nav_ul {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container .header .header_nav_ul {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .container .header .menu-btn {
+    display: none;
+  }
+  .container .header .header_nav_ul {
+    display: block;
+  }
+}
+
+.container .header .header_nav {
+  letter-spacing: 0.1em;
+  line-height: 1.3em;
+  font-size: 1rem;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Mayryo", sans-serif;
+  color: black;
+}
+
+.container .main .section .section_title {
+  font-size: 2rem;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Mayryo", sans-serif;
+  color: black;
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+  body {
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  body {
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  body {
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

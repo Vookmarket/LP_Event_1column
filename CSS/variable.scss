@@ -1,0 +1,38 @@
+/*
+構成
+- 配色
+- フォント
+- アイコン
+- メディアクエリ
+*/
+
+
+/***********配色***********/
+$colors: (
+    base1: white,
+    base2: lightgray, 
+    main: blue,
+    accent: red,
+    devide: darkgray,
+    text1: black,
+    text2: brown
+);
+@function colors($colorName){//「colors(colorName)」で使用可能にする関数
+    @return map-get($colors, $colorName);
+}
+
+/************フォント***********/
+$font1: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Mayryo", sans-serif;
+/***********アイコン***********/
+/***********メディアクエリの変数***********/
+$breakpoint: (//メディアクエリのブレークポイント
+    sp: 'screen and (max-width: 767px)',//スマホ
+    tab: 'screen and (min-width: 768px)',//タブレット
+    pc: 'screen and (min-width: 1025px)'//PC
+);
+
+@mixin mq($bp){//$bpにはsp・tab・pcのいずれかをを入れる
+    @media #{map-get($breakpoint, $bp)}{
+        @content
+    }
+}
