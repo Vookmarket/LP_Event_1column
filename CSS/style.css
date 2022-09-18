@@ -1,6 +1,5 @@
 @charset "UTF-8";
-/*インポート*/
-/*
+/*インポート*/ /*
 構成
 - 配色
 - フォント
@@ -167,7 +166,6 @@ a {
 .container {
   background-color: darkgray;
 }
-
 .container .header .header_title {
   letter-spacing: 0.1em;
   line-height: 1.3em;
@@ -175,34 +173,25 @@ a {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Mayryo", sans-serif;
   color: black;
 }
-
 .container .header .header_title a {
   color: brown;
 }
-
 .container .header .menu-btn {
   position: fixed;
   top: 5px;
   right: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 2rem;
   width: 60px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   z-index: 90;
   background-color: none;
 }
-
 .container .header .menu-btn span,
 .container .header .menu-btn span:before,
 .container .header .menu-btn span:after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   width: 25px;
@@ -210,52 +199,40 @@ a {
   background-color: white;
   position: absolute;
 }
-
 .container .header .menu-btn span:before {
   bottom: 8px;
 }
-
 .container .header .menu-btn span:after {
   top: 8px;
 }
-
 .container .header #menu-btn-check:checked ~ .menu-btn span {
   background-color: rgba(255, 255, 255, 0);
   /*メニューオープン時は真ん中の線を透明にする*/
 }
-
 .container .header #menu-btn-check:checked ~ .menu-btn span::before {
   bottom: 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
 .container .header #menu-btn-check:checked ~ .menu-btn span::after {
   top: 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
-
 .container .header #menu-btn-check {
   display: none;
 }
-
 .container .header #menu-btn-check:checked ~ .header_nav_ul {
   display: block;
 }
-
 @media screen and (max-width: 767px) {
   .container .header .header_nav_ul {
     display: none;
   }
 }
-
 @media screen and (min-width: 768px) {
   .container .header .header_nav_ul {
     display: none;
   }
 }
-
 @media screen and (min-width: 1025px) {
   .container .header .menu-btn {
     display: none;
@@ -264,7 +241,6 @@ a {
     display: block;
   }
 }
-
 .container .header .header_nav {
   letter-spacing: 0.1em;
   line-height: 1.3em;
@@ -272,13 +248,11 @@ a {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Mayryo", sans-serif;
   color: black;
 }
-
 .container .main .section .section_title {
   font-size: 2rem;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Mayryo", sans-serif;
   color: black;
 }
-
 @media screen and (max-width: 767px) {
   html {
     font-size: 16px;
@@ -290,7 +264,6 @@ a {
     text-decoration: none;
   }
 }
-
 @media screen and (min-width: 768px) {
   html {
     font-size: 16px;
@@ -302,7 +275,6 @@ a {
     text-decoration: none;
   }
 }
-
 @media screen and (min-width: 1025px) {
   body {
     width: 100%;
@@ -310,5 +282,4 @@ a {
   a {
     text-decoration: none;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

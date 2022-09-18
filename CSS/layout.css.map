@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": ";AAAA;;;;;;;EAOE;AAEF,gBAAgB",
-    "sources": [
-        "../CSS/layout.scss"
-    ],
-    "names": [],
-    "file": "layout.css"
-}
+{"version":3,"sourceRoot":"","sources":["../SCSS/layout.scss"],"names":[],"mappings":";AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AASA","file":"layout.css"}

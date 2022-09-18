@@ -1,10 +1,1 @@
-{
-    "version": 3,
-    "mappings": ";AAAA;;;;;;;;;;;;;;;;;;;;;;;EAuBE;AAGF,oBAAoB;AC1BpB;;;;;;EAME;AAGF,4BAA4B;AAc5B,iCAAiC;AAEjC,gCAAgC;AAChC,4CAA4C;ADG5C,YAAY;AACZ,oCAAoC;AAuBpC,6BAA6B;AAqC7B,0BAA0B;AAQ1B,UAAU",
-    "sources": [
-        "../CSS/text.scss",
-        "../CSS/variable.scss"
-    ],
-    "names": [],
-    "file": "text.css"
-}
+{"version":3,"sourceRoot":"","sources":["../SCSS/text.scss","../SCSS/variable.scss"],"names":[],"mappings":";AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AA0BA;AC1BA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AASA;AAcA;AAEA;AACA;ADGA;AACA;AAuBA;AAqCA;AAQA","file":"text.css"}

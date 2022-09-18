@@ -1,12 +1,1 @@
-{
-    "version": 3,
-    "mappings": ";ACAA;;;;;;EAME;AAGF,4BAA4B;AAc5B,iCAAiC;AAEjC,gCAAgC;AAChC,4CAA4C;AC1B5C;;;;;;;;;;;;;;;;;;;;;;;EAuBE;AAGF,oBAAoB;AD1BpB;;;;;;EAME;AAGF,4BAA4B;AAc5B,iCAAiC;AAEjC,gCAAgC;AAChC,4CAA4C;ACG5C,YAAY;AACZ,oCAAoC;AAuBpC,6BAA6B;AAqC7B,0BAA0B;AAQ1B,UAAU;AF7FV;;;;;;;;;;;;EAYE;AACF,YAAY;AAyCZ,8BAA8B;AAO9B,gCAAgC;AAiEhC,4BAA4B;AAO5B;;;;;;;;;;EAUE",
-    "sources": [
-        "../CSS/component.scss",
-        "../CSS/variable.scss",
-        "../CSS/text.scss",
-        "../CSS/variable.scss"
-    ],
-    "names": [],
-    "file": "component.css"
-}
+{"version":3,"sourceRoot":"","sources":["../SCSS/variable.scss","../SCSS/text.scss","../SCSS/component.scss"],"names":[],"mappings":";AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AASA;AAcA;AAEA;AACA;AC1BA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AA0BA;AD1BA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AASA;AAcA;AAEA;AACA;ACGA;AACA;AAuBA;AAqCA;AAQA;AC7FA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAaA;AAyCA;AAOA;AAiEA;AAOA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA","file":"component.css"}
