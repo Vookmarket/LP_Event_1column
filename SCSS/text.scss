@@ -39,7 +39,7 @@
     color: colors(text1);
 
     a {
-        color: colors(text2);
+        color: colors(text1);
     }
 }
 @mixin header_nav($rem) {
@@ -97,7 +97,7 @@
 }
 
 /*リンク*/
-@mixin nav_link {
+@mixin nav_link() {
     color: colors(text2);
     background-color: colors(accent);
 }

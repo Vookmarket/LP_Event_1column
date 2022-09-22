@@ -206,22 +206,66 @@ display: none;
         display: block;
     }
 
-    @include mq(sp){
-        .header_nav_ul{
+    @include mq(sp) {
+        .header_nav_ul {
             display: none;
         }
     }
-    @include mq(tab){
-        .header_nav_ul{
+
+    @include mq(tab) {
+        .header_nav_ul {
             display: none;
         }
     }
-    @include mq(pc){
-        .menu-btn{
+
+    @include mq(pc) {
+        .menu-btn {
             display: none;
         }
-        .header_nav_ul{
+
+        .header_nav_ul {
             display: block;
+        }
+    }
+}
+
+//ナビゲーションメニューのスタイル
+@mixin pc_header_nav_ul() {//親要素に必ずposithon: relative;を入れる
+    @include devide_parent();
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 100%;
+
+    li {
+        @include devide_nav(33.33%);
+
+        position: relative;
+        text-align: center;
+
+        a {
+            /*レイアウト*/
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            /*余白*/
+            margin: auto;
+            padding: 0;
+            /*ボーダー*/
+            border-radius: 10px;
+            /*トランジション*/
+            transition: all 0.3s ease-in;
+
+            /*テキスト*/
+            @include header_nav(1.1rem);
+
+            &:hover {
+                @include nav_link();
+            }
         }
     }
 }

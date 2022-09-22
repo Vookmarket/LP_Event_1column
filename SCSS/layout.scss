@@ -1,3 +1,4 @@
+@import "variable.scss";
 /*
 レイアウト
 構成
@@ -30,7 +31,7 @@
     margin: 0rem;
     padding: 0rem;
     /*ボーダー*/
-    border-right: dashed 3px colors(devide);
+    border-right: dashed 3px colors($colors(devide));
 
     &:last-child {
         border-right: none;

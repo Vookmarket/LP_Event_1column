@@ -4,6 +4,19 @@
 @import "component.scss"; //コンポネントのSass
 @import "layout.scss"; //レイアウトのSass
 
+
+/*bootstrapの導入*/
+// 1. 最初に関数を組み込む（カラー、SVG、計算などが操作できるように）
+@import "scss/_functions";
+
+// 3. 必須のBootstrapスタイルシートを組み込む
+@import "scss/variables";
+
+// 5. 残りの必須のBootstrapスタイルシートを組み込む
+@import "scss/maps";
+@import "scss/mixins";
+@import "scss/root";
+
 /*
 構成
 - 共通スタイル
@@ -12,7 +25,6 @@
     - タブレット
     - PC
 */
-
 //共通スタイル
 html {
     font-size: 16px;
@@ -25,6 +37,11 @@ body {
 
 a {
     text-decoration: none;
+    color: colors(text1);
+
+    :visited {
+        color: colors(text1);
+    }
 }
 
 .container {
@@ -38,6 +55,8 @@ a {
         @include hamburger(5px);
 
         .header_nav {
+            //レイアウト
+            //テキスト
             @include header_nav(1rem);
         }
     }
@@ -92,9 +111,7 @@ a {
             .copywrite {}
         }
     }
-
 }
-
 //タブレット
 @include mq(tab) {
     html {
@@ -145,9 +162,25 @@ a {
 
     .container {
         .header {
-            .header_title {}
+            /*レイアウト*/
+            @include devide_parent();
+            /*フォント*/
+            @include header_title(2rem);
 
-            .header_nav {}
+            .header_title {
+                @include devide_child(40%);
+            }
+
+            .header_nav {
+                @include devide_child(60%);
+                position: relative;
+                background-color: colors(base2);
+
+                .header_nav_ul {
+                    @include pc_header_nav_ul();
+                }
+
+            }
         }
 
         .main {
